@@ -11,14 +11,14 @@
       </div>
       <div class="todo-item">
         <label class="custom-checkbox">
-          <input type="checkbox" value="value-1" />
+          <input type="checkbox" value="value-2" />
           <span>Task 2</span>
         </label>
         <div class="close"></div>
       </div>
       <div class="todo-item">
         <label class="custom-checkbox">
-          <input type="checkbox" value="value-1" />
+          <input type="checkbox" value="value-3" />
           <span>Task 3</span>
         </label>
         <div class="close"></div>
