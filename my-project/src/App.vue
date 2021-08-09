@@ -55,23 +55,7 @@ export default {
 
 
 <style lang="scss">
-$headerFooterBG: #ffca93;
-$mainBg: #fff4e9;
-$todoBg: #ffdfbe;
-$addTodoBg: #ffecd8;
-$checkboxBg: #feb567;
-$headerTitle: #7f4b13;
-$footerText: #c9955d;
-$close: #fc8f1a;
-$firstGradient: #ff7e5f;
-$secondGradient: #ffa665;
-
-* {
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "./assets/styles/styles";
 
 body {
   height: 100vh;
