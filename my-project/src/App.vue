@@ -1,43 +1,23 @@
 <template>
   <div id="wrapper" class="wrapper">
     <Header />
-    <div class="main">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <AddTodo />
-    </div>
-    <div class="footer" id="footer">
-      <TodoLeft />
-      <div class="tasks_choice_group">
-        <AllTasks />
-        <ActiveTasks />
-        <CompletedTasks />
-      </div>
-    </div>
+    <TodoList />
+    <Footer />
   </div>
 </template>
 
 
 <script>
 import Header from "./components/Header.vue";
-import TodoItem from "./components/TodoItem";
-import AddTodo from "./components/AddTodo";
-import TodoLeft from "./components/TodoLeft.vue";
-import AllTasks from "./components/AllTasks.vue";
-import ActiveTasks from "./components/ActiveTasks.vue";
-import CompletedTasks from "./components/CompletedTasks.vue";
+import TodoList from "./components/TodoList";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    TodoItem,
-    AddTodo,
-    TodoLeft,
-    AllTasks,
-    ActiveTasks,
-    CompletedTasks,
+    TodoList,
+    Footer
   }
 };
 </script>
@@ -66,25 +46,6 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-
-    .main {
-      background-color: $mainBg;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 1.5em;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: $headerFooterBG;
-      padding: 0 1.5em;
-      color: $footerText;
-      font-weight: 600;
-      font-size: 1.2rem;
-    }
 
     @media only screen and (min-width: 556px) {
       #footer {
