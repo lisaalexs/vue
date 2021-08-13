@@ -8,9 +8,9 @@
 
 
 <script>
-import Header from "./components/Header.vue";
-import TodoList from "./components/TodoList";
-import Footer from "./components/Footer.vue";
+import Header from "./components/organisms/Header.vue";
+import TodoList from "./components/organisms/TodoList";
+import Footer from "./components/organisms/Footer.vue";
 
 export default {
   name: "App",
@@ -23,7 +23,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" module>
 @import "./assets/styles/styles";
 
 body {

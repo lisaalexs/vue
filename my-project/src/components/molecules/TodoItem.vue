@@ -1,8 +1,8 @@
 <template>
   <div class="todo-item">
     <label class="custom-checkbox">
-      <input type="checkbox" value="value-1" />
-      <span>Task 1</span>
+      <input type="checkbox" :checked="isChecked" />
+      <span>{{ taskTitle }}</span>
     </label>
     <div class="close"></div>
   </div>
@@ -11,13 +11,16 @@
 
 <script>
 export default {
-  name: "todo-item"
+  props: {
+    taskTitle: String,
+    isChecked: Boolean
+  }
 };
 </script>
 
 
-<style lang='scss'>
-@import ".././assets/styles/styles.scss";
+<style lang='scss' module>
+@import "../../assets/styles/styles.scss";
 
 .todo-item {
   height: 5vh;

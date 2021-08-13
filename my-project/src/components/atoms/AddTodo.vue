@@ -1,5 +1,5 @@
 <template>
-  <input class="add-todo" placeholder="Add a new task" />
+  <input :class="$style.add-todo" placeholder="Add a new task" />
 </template>
 
 
@@ -10,8 +10,8 @@ export default {
 </script>
 
 
-<style lang="scss">
-@import ".././assets/styles/styles.scss";
+<style lang="scss" module>
+@import "../../assets/styles/styles.scss";
 
 .add-todo {
   width: 100%;

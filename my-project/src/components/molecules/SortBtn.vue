@@ -1,20 +1,24 @@
 <template>
   <div class="tasks_choice_group-item">
-    <input id="radio-3" type="radio" name="radio" value="3" />
-    <label for="radio-3">Completed</label>
+    <input id="radio-2" type="radio" name="sortBtn" :checked="isChecked" />
+    <label for="radio-2">{{sortBtn}}</label>
   </div>
 </template>
 
 
 <script>
 export default {
-  name: "completed-tasks"
+  props: {
+    sortBtn: String,
+    isChecked: Boolean
+  }
 };
 </script>
 
 
 <style lang="scss">
-@import ".././assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
+
 .tasks_choice_group-item {
   display: flex;
   color: $footerText;

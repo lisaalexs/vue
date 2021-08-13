@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style lang='scss'>
-@import ".././assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
 
 .header {
   background-color: $headerFooterBG;
