@@ -1,16 +1,17 @@
 <template>
-  <div class="todo-item">
-    <label class="custom-checkbox">
+  <div :class="$style.todoItem">
+    <label :class="style.customCheckbox">
       <input type="checkbox" :checked="isChecked" />
       <span>{{ taskTitle }}</span>
     </label>
-    <div class="close"></div>
+    <div :class="$style.close"></div>
   </div>
 </template>
 
 
 <script>
 export default {
+  name: "todo-item",
   props: {
     taskTitle: String,
     isChecked: Boolean
@@ -22,7 +23,7 @@ export default {
 <style lang='scss' module>
 @import "../../assets/styles/styles.scss";
 
-.todo-item {
+.todoItem {
   height: 5vh;
   width: 100%;
   padding: 1.4em;
@@ -33,12 +34,12 @@ export default {
   background-color: $todoBg;
   margin: 0 auto;
 
-  .custom-checkbox > input {
+  .customCheckbox > input {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-  .custom-checkbox > span {
+  .customCheckbox > span {
     display: inline-flex;
     align-items: center;
     color: $headerTitle;
@@ -46,7 +47,7 @@ export default {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  .custom-checkbox > span::before {
+  .customCheckbox > span::before {
     content: "";
     display: inline-block;
     width: 24px;
@@ -60,17 +61,17 @@ export default {
     background-position: center center;
     background-size: 50% 50%;
   }
-  .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+  .customCheckbox > input:not(:disabled):not(:checked) + span:hover::before {
     box-shadow: 0 0 0 0.1rem $checkboxBg;
   }
-  .custom-checkbox > input:not(:disabled):active + span::before {
+  .customCheckbox > input:not(:disabled):active + span::before {
     border-color: $checkboxBg;
   }
-  .custom-checkbox > input:checked + span::before {
+  .customCheckbox > input:checked + span::before {
     background-color: $checkboxBg;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
   }
-  .custom-checkbox > input:disabled + span::before {
+  .customCheckbox > input:disabled + span::before {
     border-color: $checkboxBg;
   }
   .close {

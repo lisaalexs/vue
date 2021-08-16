@@ -23,7 +23,7 @@ export default {
 </script>
 
 
-<style lang="scss" module>
+<style lang="scss">
 @import "./assets/styles/styles";
 
 body {
@@ -49,10 +49,6 @@ body {
 
     @media only screen and (min-width: 556px) {
       #footer {
-        display: flex;
-        flex-direction: row;
-      }
-      div.tasks_choice_group {
         display: flex;
         flex-direction: row;
       }

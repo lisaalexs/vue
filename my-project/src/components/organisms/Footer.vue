@@ -1,7 +1,7 @@
 <template>
-  <div class="footer" id="footer">
+  <div :class="$style.footer" id="footer">
     <p>1/3 left</p>
-    <div class="tasks_choice_group">
+    <div :class="$style.tasksChoiceGroup">
       <SortBtn v-for="btn in btnData" :key="btn.id" :sortBtn="btn.type" :isChecked="btn.isChecked" />
     </div>
   </div>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" module>
 @import "../../assets/styles/styles.scss";
 
 .footer {
@@ -51,5 +51,18 @@ export default {
   color: $footerText;
   font-weight: 600;
   font-size: 1.2rem;
+
+  .tasksChoiceGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 556px) {
+    div.tasksChoiceGroup {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 </style>

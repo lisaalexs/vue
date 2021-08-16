@@ -1,5 +1,5 @@
 <template>
-  <input :class="$style.add-todo" placeholder="Add a new task" />
+  <input :class="$style.addTodo" placeholder="Add a new task" />
 </template>
 
 
@@ -13,7 +13,7 @@ export default {
 <style lang="scss" module>
 @import "../../assets/styles/styles.scss";
 
-.add-todo {
+.addTodo {
   width: 100%;
   padding: 0.8em;
   text-align: center;
@@ -24,7 +24,7 @@ export default {
   cursor: pointer;
 }
 
-.add-todo::placeholder {
+.addTodo::placeholder {
   color: $headerFooterBG;
   font-size: 1.3rem;
 }

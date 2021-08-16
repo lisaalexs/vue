@@ -1,14 +1,14 @@
 <template>
-  <div class="header">to do list</div>
+  <div :class="$style.header">to do list</div>
 </template>
 
 <script>
 export default {
-  name: "header"
+  name: "Header"
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' module>
 @import "../../assets/styles/styles.scss";
 
 .header {
