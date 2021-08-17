@@ -22,11 +22,11 @@ export default {
   background-color: $addTodoBg;
   font-weight: 600;
   cursor: pointer;
-}
 
-.addTodo::placeholder {
-  color: $headerFooterBG;
-  font-size: 1.3rem;
+  &::placeholder {
+    color: $headerFooterBG;
+    font-size: 1.3rem;
+  }
 }
 </style>
 

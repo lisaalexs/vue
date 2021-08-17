@@ -22,24 +22,25 @@ export default {
 .tasksChoiceGroupItem {
   display: flex;
   color: $footerText;
-}
-.tasksChoiceGroupItem input[type="radio"] {
-  display: none;
-}
-.tasksChoiceGroupItem label {
-  display: flex;
-  cursor: pointer;
-  padding: 0px 15px;
-  color: $footerText;
-}
 
-.tasksChoiceGroupItem input[type="radio"]:checked + label {
-  border: 2px solid $footerText;
-  border-radius: 7px;
-}
+  & input[type="radio"] {
+    display: none;
+  }
+  & label {
+    display: flex;
+    cursor: pointer;
+    padding: 0px 15px;
+    color: $footerText;
+  }
 
-.tasksChoiceGroupItem label:hover {
-  border: 2px solid $footerText;
-  border-radius: 7px;
+  & input[type="radio"]:checked + label {
+    border: 2px solid $footerText;
+    border-radius: 7px;
+  }
+
+  & label:hover {
+    border: 2px solid $footerText;
+    border-radius: 7px;
+  }
 }
 </style>
