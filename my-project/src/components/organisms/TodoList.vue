@@ -1,9 +1,9 @@
 <template>
   <div :class="$style.main">
     <TodoItem
-      v-for="todo in todos"
+      v-for="todo in allTodos"
       :key="todo.id"
-      :taskTitle="todo.task"
+      :taskTitle="todo.taskTitle"
       :isChecked="todo.isChecked"
     />
     <AddTodo />
@@ -11,31 +11,12 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import TodoItem from "../molecules/TodoItem";
 import AddTodo from "../atoms/AddTodo";
 
 export default {
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          task: "Task 1",
-          isChecked: false
-        },
-        {
-          id: 2,
-          task: "Task 2",
-          isChecked: true
-        },
-        {
-          id: 3,
-          task: "Task 3",
-          isChecked: false
-        }
-      ]
-    };
-  },
+  computed: mapGetters(["allTodos"]),
   components: {
     TodoItem,
     AddTodo

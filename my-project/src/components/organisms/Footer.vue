@@ -1,36 +1,24 @@
 <template>
   <div :class="$style.footer" id="footer">
-    <p>1/3 left</p>
+    <p>{{todosCompleted}}/ {{todosLength}} left</p>
     <div :class="$style.tasksChoiceGroup">
-      <SortBtn v-for="btn in btnData" :key="btn.id" :sortBtn="btn.type" :isChecked="btn.isChecked" />
+      <SortBtn
+        v-for="btn in sortBtn"
+        :key="btn.id"
+        :sortBtn="btn.btnTitle"
+        :isChecked="btn.isChecked"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import SortBtn from "../molecules/SortBtn";
 
 export default {
-  data() {
-    return {
-      btnData: [
-        {
-          id: 1,
-          type: "All",
-          isChecked: true
-        },
-        {
-          id: 2,
-          type: "Active",
-          isChecked: false
-        },
-        {
-          id: 3,
-          type: "Complete",
-          isChecked: false
-        }
-      ]
-    };
+  computed: {
+    ...mapGetters(["sortBtn", "todosLength", "todosCompleted"])
   },
   components: {
     SortBtn

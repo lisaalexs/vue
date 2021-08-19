@@ -4,17 +4,25 @@
       <input type="checkbox" :checked="isChecked" />
       <span>{{ taskTitle }}</span>
     </label>
-    <div :class="$style.close"></div>
+    <div :class="$style.close" @click="remove"></div>
   </div>
 </template>
 
 
 <script>
+import { mapMutations } from "vuex";
 export default {
-  name: "todo-item",
+  name: "TodoItem",
   props: {
     taskTitle: String,
-    isChecked: Boolean
+    isChecked: Boolean,
+    id: Number
+  },
+  methods: {
+    ...mapMutations["removeTodo"],
+    remove() {
+      this.removeTodo(this.id);
+    }
   }
 };
 </script>
