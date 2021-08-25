@@ -40,9 +40,10 @@ export default new Vuex.Store({
         isPicked: false
       }
     ],
+    type: 'All',
   },
   getters: {
-    allTodos(state) { return state.todos },
+    //allTodos(state) { return state.todos },
     sortBtn(state) { return state.btnData },
     todosLength(state) { return state.todos.length },
     todosCompleted(state) {

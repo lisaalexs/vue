@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.main">
     <TodoItem
-      v-for="todo in allTodos"
+      v-for="todo in showSortBtn"
       :key="todo.id"
       :taskTitle="todo.taskTitle"
       :isChecked="todo.isChecked"
@@ -18,7 +18,7 @@ import AddTodo from "../atoms/AddTodo";
 
 export default {
   computed: {
-    ...mapGetters(["allTodos", "showSortBtn"])
+    ...mapGetters(["showSortBtn"])
   },
   components: {
     TodoItem,

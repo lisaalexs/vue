@@ -34,19 +34,19 @@ export default {
   & input[type="radio"] {
     display: none;
   }
-  & label {
+  & span {
     display: flex;
     cursor: pointer;
     padding: 0px 15px;
     color: $footerText;
   }
 
-  & input[type="radio"]:checked + label {
+  & input[type="radio"]:checked + span {
     border: 2px solid $footerText;
     border-radius: 7px;
   }
 
-  & label:hover {
+  & span:hover {
     border: 2px solid $footerText;
     border-radius: 7px;
   }
