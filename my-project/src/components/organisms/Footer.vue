@@ -3,7 +3,7 @@
     <p>{{todosCompleted}}/ {{todosLength}} left</p>
     <div :class="$style.tasksChoiceGroup">
       <SortBtn
-        v-for="btn in sortBtn"
+        v-for="btn in showSortBtn"
         :key="btn.id"
         :title="btn.type"
         :isPicked="btn.isPicked"
@@ -19,7 +19,7 @@ import SortBtn from "../molecules/SortBtn";
 
 export default {
   computed: {
-    ...mapGetters(["sortBtn", "todosLength", "todosCompleted"])
+    ...mapGetters(["sortBtn", "todosLength", "todosCompleted", "showSortBtn"])
   },
   components: {
     SortBtn

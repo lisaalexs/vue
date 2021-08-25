@@ -53,6 +53,7 @@ export default new Vuex.Store({
         case 'Active': return state.todos.filter((todo) => !todo.isChecked);
         case 'Complete': return state.todos.filter((todo) => todo.isChecked);
         default: return state.todos;
+
       }
     }
   },
@@ -73,12 +74,10 @@ export default new Vuex.Store({
       );
     },
 
-    changeBtn(state, id) {
-      state.btnData = state.btnData.map((btn) => btn.id === id ? (state.type = btn.type) : btn);
-    },
-    changeBtnStatus(state, id) {
-      state.btnData = state.btnData.map((btn) =>
-        btn.id === id ? { ...btn, isPicked: btn.isPicked } : btn
+    changeBtnStatus(state, title) {
+      state.type = title;
+      state.btnData.map((btn) =>
+        btn.title === title ? { ...btn, isPicked: !btn.isPicked } : btn
       );
     },
   }

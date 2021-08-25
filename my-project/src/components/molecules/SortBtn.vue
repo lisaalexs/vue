@@ -1,16 +1,8 @@
 <template>
-  <div :class="$style.tasksChoiceGroupItem">
-    <input
-      id="radio-2"
-      type="radio"
-      name="sortBtn"
-      :checked="isPicked"
-      :title="title"
-      :id="id"
-      @click="change"
-    />
-    <label for="radio-2">{{title}}</label>
-  </div>
+  <label :class="$style.tasksChoiceGroupItem">
+    <input type="radio" name="sortBtn" :checked="isPicked" @click="change" />
+    <span>{{title}}</span>
+  </label>
 </template>
 
 
@@ -23,10 +15,9 @@ export default {
     id: Number
   },
   methods: {
-    ...mapMutations(["changeBtn", "changeBtnStatus"]),
+    ...mapMutations(["changeBtnStatus"]),
     change() {
-      this.changeBtn(this.id);
-      this.changeBtnStatus(this.id);
+      this.changeBtnStatus(this.title);
     }
   }
 };
