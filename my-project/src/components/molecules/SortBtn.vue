@@ -1,16 +1,33 @@
 <template>
   <div :class="$style.tasksChoiceGroupItem">
-    <input id="radio-2" type="radio" name="sortBtn" :checked="isChecked" />
-    <label for="radio-2">{{sortBtn}}</label>
+    <input
+      id="radio-2"
+      type="radio"
+      name="sortBtn"
+      :checked="isPicked"
+      :title="title"
+      :id="id"
+      @click="change"
+    />
+    <label for="radio-2">{{title}}</label>
   </div>
 </template>
 
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   props: {
-    sortBtn: String,
-    isChecked: Boolean
+    title: String,
+    isPicked: Boolean,
+    id: Number
+  },
+  methods: {
+    ...mapMutations(["changeBtn", "changeBtnStatus"]),
+    change() {
+      this.changeBtn(this.id);
+      this.changeBtnStatus(this.id);
+    }
   }
 };
 </script>

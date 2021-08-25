@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.todoItem">
     <label :class="$style.customCheckbox">
-      <input type="checkbox" :checked="isChecked" />
+      <input type="checkbox" :checked="isChecked" @click="change" />
       <span>{{ taskTitle }}</span>
     </label>
     <div :class="$style.close" @click="remove"></div>
@@ -19,9 +19,12 @@ export default {
     id: Number
   },
   methods: {
-    ...mapMutations["removeTodo"],
+    ...mapMutations(["removeTodo", "changeTodoStatus"]),
     remove() {
       this.removeTodo(this.id);
+    },
+    change() {
+      this.changeTodoStatus(this.id);
     }
   }
 };

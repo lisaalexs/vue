@@ -26,35 +26,60 @@ export default new Vuex.Store({
     btnData: [
       {
         id: 1,
-        btnTitle: "All",
-        isChecked: true
+        type: "All",
+        isPicked: true
       },
       {
         id: 2,
-        btnTitle: "Active",
-        isChecked: false
+        type: "Active",
+        isPicked: false
       },
       {
         id: 3,
-        btnTitle: "Complete",
-        isChecked: false
+        type: "Complete",
+        isPicked: false
       }
     ],
   },
   getters: {
-    allTodos: (state) => state.todos,
-    sortBtn: (state) => state.btnData,
-    todosLength: (state) => state.todos.length,
-    todosCompleted: (state) => state.todos.filter((todo) => todo.isChecked).length,
+    allTodos(state) { return state.todos },
+    sortBtn(state) { return state.btnData },
+    todosLength(state) { return state.todos.length },
+    todosCompleted(state) {
+      return state.todos.filter((todo) => todo.isChecked).length
+    },
+    showSortBtn(state) {
+      switch (state.type) {
+        case 'Active': return state.todos.filter((todo) => !todo.isChecked);
+        case 'Complete': return state.todos.filter((todo) => todo.isChecked);
+        default: return state.todos;
+      }
+    }
   },
   mutations: {
     addTodo(state, newTodo) {
       if (newTodo) {
         const todo = { id: state.todos.length + 1, taskTitle: newTodo, isChecked: false };
-        state.todos.unshift(todo)
+        return state.todos.unshift(todo)
       }
     },
-    removeTodo: (state, id) => state.todos = state.todos.filter(todo => todo.id !== id),
+    removeTodo(state, id) {
+      return state.todos = state.todos.filter(todo => todo.id !== id)
+    },
 
+    changeTodoStatus(state, id) {
+      state.todos = state.todos.map((todo) =>
+        todo.id === id ? { ...todo, isChecked: !todo.isChecked } : todo
+      );
+    },
+
+    changeBtn(state, id) {
+      state.btnData = state.btnData.map((btn) => btn.id === id ? (state.type = btn.type) : btn);
+    },
+    changeBtnStatus(state, id) {
+      state.btnData = state.btnData.map((btn) =>
+        btn.id === id ? { ...btn, isPicked: btn.isPicked } : btn
+      );
+    },
   }
 });

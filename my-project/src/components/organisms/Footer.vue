@@ -5,8 +5,9 @@
       <SortBtn
         v-for="btn in sortBtn"
         :key="btn.id"
-        :sortBtn="btn.btnTitle"
-        :isChecked="btn.isChecked"
+        :title="btn.type"
+        :isPicked="btn.isPicked"
+        :id="btn.id"
       />
     </div>
   </div>

@@ -5,6 +5,7 @@
       :key="todo.id"
       :taskTitle="todo.taskTitle"
       :isChecked="todo.isChecked"
+      :id="todo.id"
     />
     <AddTodo />
   </div>
@@ -16,7 +17,9 @@ import TodoItem from "../molecules/TodoItem";
 import AddTodo from "../atoms/AddTodo";
 
 export default {
-  computed: mapGetters(["allTodos"]),
+  computed: {
+    ...mapGetters(["allTodos", "showSortBtn"])
+  },
   components: {
     TodoItem,
     AddTodo
