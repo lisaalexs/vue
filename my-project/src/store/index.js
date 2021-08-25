@@ -59,16 +59,19 @@ export default new Vuex.Store({
     addTodo(state, newTodo) {
       if (newTodo) {
         const todo = { id: state.todos.length + 1, taskTitle: newTodo, isChecked: false };
-        return state.todos.unshift(todo)
+        state.todos.unshift(todo)
       }
+      localStorage.setItem("todos", JSON.stringify(state.todos));
     },
     removeTodo(state, id) {
-      return state.todos = state.todos.filter(todo => todo.id !== id)
+      state.todos = state.todos.filter(todo => todo.id !== id)
+      localStorage.setItem("todos", JSON.stringify(state.todos));
     },
     changeTodoStatus(state, id) {
       state.todos = state.todos.map((todo) =>
         todo.id === id ? { ...todo, isChecked: !todo.isChecked } : todo
       );
+      localStorage.setItem("todos", JSON.stringify(state.todos));
     },
     changeBtnStatus(state, title) {
       state.type = title;
@@ -76,5 +79,13 @@ export default new Vuex.Store({
         btn.title === title ? { ...btn, isPicked: !btn.isPicked } : btn
       );
     },
-  }
+    getFromStorage(state) {
+      state.todos = JSON.parse(localStorage.getItem("todos")) || [];
+    },
+  },
+  actions: {
+    getFromStorage(context) {
+      context.commit("getFromStorage");
+    },
+  },
 });

@@ -19,6 +19,9 @@ export default {
   computed: {
     ...mapGetters(["showSortBtn"])
   },
+  mounted() {
+    this.$store.dispatch("getFromStorage");
+  },
   components: {
     TodoItem,
     AddTodo
