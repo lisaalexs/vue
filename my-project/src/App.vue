@@ -1,11 +1,10 @@
 <template>
-  <div id="wrapper" class="wrapper">
+  <div class="wrapper">
     <Header />
     <TodoList />
     <Footer />
   </div>
 </template>
-
 
 <script>
 import Header from "@/components/organisms/Header.vue";
