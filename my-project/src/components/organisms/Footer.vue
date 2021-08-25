@@ -1,7 +1,7 @@
 <template>
-  <div :class="$style.footer" id="footer">
+  <div :class="$style.footer">
     <p>{{todosCompleted}}/ {{todosLength}} left</p>
-    <div :class="$style.tasksChoiceGroup">
+    <div :class="$style.tasksChoice">
       <SortBtn
         v-for="btn in sortBtn"
         :key="btn.id"
@@ -15,7 +15,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import SortBtn from "../molecules/SortBtn";
+import SortBtn from "@/components/molecules/SortBtn";
 
 export default {
   computed: {
@@ -27,9 +27,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" module>
-@import "../../assets/styles/styles.scss";
+@import "@/assets/styles/styles.scss";
 
 .footer {
   display: flex;
@@ -40,15 +39,14 @@ export default {
   color: $footerText;
   font-weight: 600;
   font-size: 1.2rem;
-
-  .tasksChoiceGroup {
+  .tasksChoice {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   @media only screen and (min-width: 556px) {
-    div.tasksChoiceGroup {
+    div.tasksChoice {
       display: flex;
       flex-direction: row;
     }

@@ -8,7 +8,6 @@
   </div>
 </template>
 
-
 <script>
 import { mapMutations } from "vuex";
 export default {
@@ -30,9 +29,8 @@ export default {
 };
 </script>
 
-
 <style lang='scss' module>
-@import "../../assets/styles/styles.scss";
+@import "@/assets/styles/styles.scss";
 
 .todoItem {
   height: 5vh;
@@ -44,7 +42,6 @@ export default {
   border-radius: 10px;
   background-color: $todoBg;
   margin: 0 auto;
-
   .customCheckbox {
     & > input {
       position: absolute;
@@ -87,7 +84,6 @@ export default {
       border-color: $checkboxBg;
     }
   }
-
   .close {
     height: 24px;
     width: 24px;
@@ -95,7 +91,6 @@ export default {
     border-radius: 5px;
     position: relative;
     border: 2px solid $headerFooterBG;
-
     &:after {
       position: absolute;
       top: -40px;

@@ -1,10 +1,14 @@
 <template>
   <form @submit="onSubmit">
-    <input type="text" :class="$style.textInput" placeholder="Add todo..." v-model="newInput" />
+    <input
+      type="text"
+      :class="$style.textInput"
+      placeholder="Type your todo here..."
+      v-model="newInput"
+    />
     <input type="submit" :class="$style.addTodo" value="Add a new task" />
   </form>
 </template>
-
 
 <script>
 import { mapMutations } from "vuex";
@@ -26,9 +30,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" module>
-@import "../../assets/styles/styles.scss";
+@import "@/assets/styles/styles.scss";
 
 form {
   display: flex;
@@ -41,12 +44,17 @@ form {
     border: 2px solid $headerFooterBG;
     border-radius: 10px;
     cursor: pointer;
-
     &:hover {
       border: 3px solid $headerFooterBG;
     }
     &:focus {
       outline: none;
+    }
+    &::placeholder {
+      color: $headerFooterBG;
+      font-size: 1.3rem;
+      text-align: center;
+      font-weight: 700;
     }
   }
   .addTodo {
@@ -58,11 +66,6 @@ form {
     background-color: $addTodoBg;
     font-weight: 600;
     cursor: pointer;
-
-    &::placeholder {
-      color: $headerFooterBG;
-      font-size: 1.3rem;
-    }
   }
 }
 </style>

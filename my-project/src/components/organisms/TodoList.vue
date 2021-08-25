@@ -13,9 +13,8 @@
 
 <script>
 import { mapGetters } from "vuex";
-import TodoItem from "../molecules/TodoItem";
-import AddTodo from "../atoms/AddTodo";
-
+import TodoItem from "@/components/molecules/TodoItem";
+import AddTodo from "@/components/atoms/AddTodo";
 export default {
   computed: {
     ...mapGetters(["showSortBtn"])
@@ -27,9 +26,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" module>
-@import "../../assets/styles/styles.scss";
+@import "@/assets/styles/styles.scss";
 .main {
   background-color: $mainBg;
   display: flex;

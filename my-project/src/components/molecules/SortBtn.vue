@@ -1,10 +1,9 @@
 <template>
-  <label :class="$style.tasksChoiceGroupItem">
+  <label :class="$style.tasksChoiceItem">
     <input type="radio" name="sortBtn" :checked="isPicked" @click="change" />
     <span>{{title}}</span>
   </label>
 </template>
-
 
 <script>
 import { mapMutations } from "vuex";
@@ -23,14 +22,12 @@ export default {
 };
 </script>
 
-
 <style lang="scss" module>
-@import "../../assets/styles/styles.scss";
+@import "@/assets/styles/styles.scss";
 
-.tasksChoiceGroupItem {
+.tasksChoiceItem {
   display: flex;
   color: $footerText;
-
   & input[type="radio"] {
     display: none;
   }
@@ -40,12 +37,10 @@ export default {
     padding: 0px 15px;
     color: $footerText;
   }
-
   & input[type="radio"]:checked + span {
     border: 2px solid $footerText;
     border-radius: 7px;
   }
-
   & span:hover {
     border: 2px solid $footerText;
     border-radius: 7px;

@@ -8,10 +8,9 @@
 
 
 <script>
-import Header from "./components/organisms/Header.vue";
-import TodoList from "./components/organisms/TodoList";
-import Footer from "./components/organisms/Footer.vue";
-
+import Header from "@/components/organisms/Header.vue";
+import TodoList from "@/components/organisms/TodoList";
+import Footer from "@/components/organisms/Footer.vue";
 export default {
   name: "App",
   components: {
@@ -22,9 +21,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss">
-@import "./assets/styles/styles";
+@import "@/assets/styles/styles";
 
 body {
   height: 100vh;
@@ -37,7 +35,6 @@ body {
   background-position: cover;
   background-repeat: no-repeat;
   position: relative;
-
   .wrapper {
     width: 80vw;
     position: absolute;

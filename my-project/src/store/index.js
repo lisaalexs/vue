@@ -2,9 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex)
-
 export default new Vuex.Store({
-
   state: {
     todos: [
       {
@@ -43,7 +41,6 @@ export default new Vuex.Store({
     type: 'All',
   },
   getters: {
-    //allTodos(state) { return state.todos },
     sortBtn(state) { return state.btnData },
     todosLength(state) { return state.todos.length },
     todosCompleted(state) {
@@ -68,13 +65,11 @@ export default new Vuex.Store({
     removeTodo(state, id) {
       return state.todos = state.todos.filter(todo => todo.id !== id)
     },
-
     changeTodoStatus(state, id) {
       state.todos = state.todos.map((todo) =>
         todo.id === id ? { ...todo, isChecked: !todo.isChecked } : todo
       );
     },
-
     changeBtnStatus(state, title) {
       state.type = title;
       state.btnData.map((btn) =>
