@@ -51,7 +51,6 @@ export default new Vuex.Store({
         case 'Active': return state.todos.filter((todo) => !todo.isChecked);
         case 'Complete': return state.todos.filter((todo) => todo.isChecked);
         default: return state.todos;
-
       }
     }
   },
