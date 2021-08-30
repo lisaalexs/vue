@@ -17,21 +17,39 @@ describe("store testing", () => {
         expect(store.getters.todosCompleted).toBe(1);
     });
     test("getter showSortBtn shows todos according to the filter", () => {
-
-        //THIS TEST DOESN'T WORK CORRECTLY OR CODE IS WRONG
-
         store.state.type = "All";
-        expect(store.getters.showSortBtn).toBe(store.state.todos);
+        expect(store.getters.showSortBtn.length).toBe(store.state.todos.length);
         store.state.type = "Active";
         expect(store.getters.showSortBtn.length).toBe(2);
-        store.state.buttonTitle = "Complete";
+        store.state.type = "Complete";
         expect(store.getters.showSortBtn.length).toBe(1);
     });
 
     test("mutation 'removeTodo' delete one chosen todo", () => {
         const id = store.state.todos[0].id;
         store.commit("removeTodo", id);
-        expect(store.state.todos.length).toBe(store.state.todos.length - 1);
+        expect(store.state.todos.length).toBe(2);
+    });
+    test("mutation 'addTask' add new task", () => {
+        const newTodo = "newTask";
+        store.commit("addTodo", newTodo);
+        expect(store.state.todos[0].taskTitle).toBe(newTodo);
+        expect(store.state.todos[0].isChecked).toBe(false);
+        expect(store.state.todos[0].id).toBeTruthy();
+    });
+    test("mutation 'changeBtnStatus' change radio button status", () => {
+        const title = store.state.btnData[1].type;
+        const isPicked = store.state.btnData[1].isPicked;
+        store.commit("changeBtnStatus", title);
+        expect(store.state.btnData[1].isPicked).toBe(isPicked);
+    });
+    test("mutation 'changeTodoStatus' change checkbox status", () => {
+        const task = "newTask";
+        store.commit("addTodo", task);
+        const id = store.state.todos[0].id;
+        const isChecked = store.state.todos[0].isChecked;
+        store.commit("changeTodoStatus", id);
+        expect(store.state.todos[0].isChecked).toBe(!isChecked);
     });
     test("getFromStorage", () => {
         store.dispatch("getFromStorage");

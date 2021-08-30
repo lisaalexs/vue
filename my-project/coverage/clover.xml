@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630347772098" clover="3.2.0">
-  <project timestamp="1630347772099" name="All files">
-    <metrics statements="20" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6" elements="26" coveredelements="22" complexity="0" loc="20" ncloc="20" packages="6" files="8" classes="8"/>
+<coverage generated="1630350975571" clover="3.2.0">
+  <project timestamp="1630350975571" name="All files">
+    <metrics statements="41" coveredstatements="37" conditionals="11" coveredconditionals="8" methods="22" coveredmethods="22" elements="74" coveredelements="67" complexity="0" loc="41" ncloc="41" packages="6" files="8" classes="8"/>
     <package name="src">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/App.vue">
@@ -59,9 +59,30 @@
       </file>
     </package>
     <package name="src.store.modules">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="8" methods="16" coveredmethods="16"/>
       <file name="todos.js" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/store/modules/todos.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="8" methods="16" coveredmethods="16"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="47" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="56" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="79" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="84" count="1" type="stmt"/>
       </file>
     </package>
   </project>
