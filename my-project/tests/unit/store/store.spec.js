@@ -4,7 +4,7 @@ import storeConfig from "./store.cfg.js";
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
-const store = storeConfig; //если store = new Vuex.Store(storeConfig) то все тесты обнуляются.
+const store = new Vuex.Store(storeConfig);
 
 describe("store testing", () => {
     it("return all tasks count", () => {

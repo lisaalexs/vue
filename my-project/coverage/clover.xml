@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630328604787" clover="3.2.0">
-  <project timestamp="1630328604787" name="All files">
-    <metrics statements="41" coveredstatements="22" conditionals="11" coveredconditionals="1" methods="22" coveredmethods="11" elements="74" coveredelements="34" complexity="0" loc="41" ncloc="41" packages="5" files="7" classes="7"/>
+<coverage generated="1630347772098" clover="3.2.0">
+  <project timestamp="1630347772099" name="All files">
+    <metrics statements="20" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6" elements="26" coveredelements="22" complexity="0" loc="20" ncloc="20" packages="6" files="8" classes="8"/>
     <package name="src">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/App.vue">
@@ -52,31 +52,16 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="22" coveredstatements="6" conditionals="11" coveredconditionals="1" methods="16" coveredmethods="5"/>
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.js" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/store/index.js">
-        <metrics statements="22" coveredstatements="6" conditionals="11" coveredconditionals="1" methods="16" coveredmethods="5"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="50" count="1" type="cond" truecount="1" falsecount="2"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="87" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.store.modules">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="todos.js" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/store/modules/todos.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
   </project>
