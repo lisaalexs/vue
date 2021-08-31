@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630350975571" clover="3.2.0">
-  <project timestamp="1630350975571" name="All files">
-    <metrics statements="41" coveredstatements="37" conditionals="11" coveredconditionals="8" methods="22" coveredmethods="22" elements="74" coveredelements="67" complexity="0" loc="41" ncloc="41" packages="6" files="8" classes="8"/>
+<coverage generated="1630399331043" clover="3.2.0">
+  <project timestamp="1630399331044" name="All files">
+    <metrics statements="41" coveredstatements="36" conditionals="11" coveredconditionals="8" methods="22" coveredmethods="21" elements="74" coveredelements="65" complexity="0" loc="41" ncloc="41" packages="6" files="8" classes="8"/>
     <package name="src">
-      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.vue" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/App.vue">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.atoms">
@@ -37,18 +38,17 @@
       </file>
     </package>
     <package name="src.components.organisms">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Footer.vue" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/components/organisms/Footer.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
       <file name="TodoList.vue" path="/Users/lizavetabadunova/Documents/todo-vue/vue/my-project/src/components/organisms/TodoList.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.store">

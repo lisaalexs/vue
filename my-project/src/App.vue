@@ -16,6 +16,9 @@ export default {
     Header,
     TodoList,
     Footer
+  },
+  mounted() {
+    this.$store.dispatch("getFromStorage");
   }
 };
 </script>

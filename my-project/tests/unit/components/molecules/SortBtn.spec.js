@@ -24,7 +24,9 @@ describe("unit test for Buttons", () => {
     });
     test("sorting tasks", async () => {
         let wrapper = mount(SortBtn, { localVue });
-        let changer = wrapper.find("input");
+        let changer = wrapper.find("input[type='radio']");
         await changer.trigger("click");
+        await changer.trigger("change");
+        expect(mutations.changeBtnStatus).toHaveBeenCalled();
     });
 });
