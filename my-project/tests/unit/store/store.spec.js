@@ -53,6 +53,6 @@ describe("store testing", () => {
     });
     test("getFromStorage", () => {
         store.dispatch("getFromStorage");
-        expect(store.state.todos.length).toBe(0);
+        expect(store.state.todos.length).toBe(4);
     });
 });

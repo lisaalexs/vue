@@ -23,7 +23,7 @@ describe("unit test for Buttons", () => {
         expect(wrapper.findAll("button")).toBeTruthy();
     });
     test("sorting tasks", async () => {
-        let wrapper = mount(SortBtn, { localVue });
+        let wrapper = mount(SortBtn, { store, localVue });
         let changer = wrapper.find("input[type='radio']");
         await changer.trigger("click");
         await changer.trigger("change");
